@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haflo's Signature</title>
+
+    <style>
+        .container {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #151b32;
+            border: 1px solid rgba(209, 208, 213, 0.52);
+            background-color: #F1F1F1;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        /* .content {} */
+
+        .grid {
+            display: grid;
+            grid-template-areas:
+                "head1 head2 head3"
+                "mid1 mid2 mid3"
+                "foot1 foot2 foot3";
+            gap: 15px;
+            background-color: rgb(250, 250, 250);
+            padding-top: 50px;
+            padding-bottom: 60px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: -45px;
+        }
+
+        .box {
+            display: block;
+            background-color: #fbfcff;
+            border-radius: 5px;
+            border: 2px solid lightgray;
+            height: auto;
+        }
+
+        .box .box1 {
+            grid-area: head1;
+        }
+
+        .box .box2 {
+            grid-area: head2;
+
+        }
+
+        .box .box3 {
+            grid-area: head3;
+        }
+
+        .box .box4 {
+            grid-area: foot1;
+        }
+
+        .box .box5 {
+            grid-area: foot2;
+        }
+
+        .box .box6 {
+            grid-area: foot3;
+        }
+
+        .nav-bar {
+            height: 35px;
+            margin-left: 10px;
+            margin-top: 7px;
+        }
+
+        .search-btn {
+            background-color: rgb(120, 120, 120);
+            border: none;
+            color: white;
+            border-radius: 15px;
+            padding: 0px 17px 0px 17px;
+            height: 27px;
+            margin-right: 15px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .search-btn:hover {}
+
+        .search {
+            border-radius: 50px;
+            border: 2px solid lightgray;
+            padding: 3px 10px 3px 10px;
+            height: 35px;
+            width: 300px;
+            margin: auto;
+            cursor: pointer;
+            margin-top: 7px;
+        }
+
+        .search:hover {
+            border: 2px solid rgb(168, 168, 168);
+        }
+
+        .top {
+            box-shadow: 0px 4px 5px 0px #c4c4c6ab;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            /* gap: 50px; */
+        }
+
+        .product-name {
+            font-size: 12px;
+            margin: auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: -5px;
+        }
+
+        .product-price {
+            margin-bottom: -10px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .txt {
+            display: none;
+
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .rating {
+            display: none;
+        }
+
+        .info {
+            padding: 10px;
+        }
+
+        .footer {
+            color: white;
+        }
+
+        .ft-top {
+            display: flex;
+            background-color: #282828;
+            margin-top: -20px;
+            padding-left: 30px;
+            /* height: 55px; */
+            margin: auto;
+            gap: 20px;
+        }
+
+        .ft-bottom {
+            margin: auto;
+            background-color: #323232;
+            display: flex;
+            gap: 25px;
+            padding-left: 17px;
+        }
+
+        .ft-txt {
+            font-size: 15px;
+            margin-top: -9px;
+            font-weight: 700;
+        }
+
+        .about-txt1 {
+            font-size: 13px;
+        }
+
+        .about-txt2 {
+            font-size: 13px;
+            margin-top: -10px;
+        }
+
+        .mail-icon {
+            font-size: 15px;
+            margin-top: 0;
+            font-weight: bold;
+        }
+
+        .mail {
+            font-size: 13px;
+            margin-top: 1px;
+        }
+
+        .email {
+            display: flex;
+            gap: 10px;
+            margin-top: -7px;
+            margin-bottom: -37px;
+        }
+
+        .number {
+            font-size: 12px;
+        }
+
+        .about-us {
+            font-size: 11px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .contact {
+            font-size: 11px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .fb {
+            font-size: 11px;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        h3 {
+            font-size: 13px;
+            margin-left: -5px;
+
+        }
+
+        .title {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: -65px;
+        }
+
+        @media(min-width:767px) {
+            .container {
+                padding-bottom: 50px;
+            }
+
+            .content {
+                padding-left: 70px;
+                padding-right: 70px;
+            }
+
+            .box .box1 {
+                grid-area: head1;
+            }
+
+            .box .box2 {
+                grid-area: head2;
+
+            }
+
+            .box .box3 {
+                grid-area: mid1;
+            }
+
+            .box .box4 {
+                grid-area: mid2;
+            }
+
+            .box .box5 {
+                grid-area: foot1;
+            }
+
+            .box .box6 {
+                grid-area: foot2;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 head3"
+                    "mid1 mid2 mid3"
+                    "foot1 foot2 foot3";
+                gap: 13px;
+            }
+
+            .box {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
+            }
+
+            .txt {
+                font-size: 10px;
+                display: inherit;
+            }
+
+            .review-no {
+                font-size: 12px;
+                display: inherit;
+            }
+
+            .product-img {
+                width: 100%;
+                height: auto;
+            }
+
+            .stars {
+                display: inherit;
+                margin-top: 18px;
+            }
+
+            .rating {
+                display: flex;
+                margin-bottom: -27px;
+                gap: 7px;
+            }
+
+
+            .info {
+                padding: 10px;
+                display: inherit;
+            }
+
+            .star {
+                width: 14px;
+                height: 14px;
+                display: inherit;
+            }
+
+            .ft-top {
+                gap: 30px;
+                /* height: 55px; */
+                padding-top: -50px;
+                padding-left: 70px;
+            }
+
+            .ft-bottom {
+                gap: 40px;
+                /* height: 160px; */
+                padding-left: 70px;
+            }
+
+            .ft-txt {
+                font-size: 17px;
+                margin-top: -1px;
+            }
+
+            .about-txt1 {
+                font-size: 15px;
+            }
+
+            .about-txt2 {
+                font-size: 15px;
+            }
+
+            .mail-icon {
+                font-size: 16px;
+            }
+
+            .mail {
+                font-size: 15px;
+            }
+
+            .number {
+                font-size: 13px;
+            }
+
+            .about-us {
+                font-size: 12px;
+            }
+
+            .contact {
+                font-size: 12px;
+            }
+
+            .fb {
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 15px;
+            }
+
+            .search-btn {
+                border-radius: 10px;
+                height: 33px;
+                margin-right: 50px;
+                font-size: 14px;
+            }
+
+            .search {
+                height: 35px;
+                width: 500px;
+                margin-top: 11px;
+                /* margin-left: -100px; */
+            }
+
+            .nav-bar {
+                margin-top: 12px;
+            }
+
+            .top {
+                height: 57px;
+            }
+
+            .top-box {
+                margin-top: -10px;
+            }
+        }
+
+        @media(min-width:1000px) {
+            .container {
+                /* margin-left: 265px; */
+            }
+
+            .content {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+            /* .left {
+                background-color: rgb(244, 244, 244);
+                padding-left: 10px;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                width: 250px;
+
+                border-right: 5px ridge rgb(192, 192, 192);
+            } */
+
+            .box .box1 {
+                grid-area: head1;
+            }
+
+            .box .box2 {
+                grid-area: head2;
+
+            }
+
+            .box .box3 {
+                grid-area: head3;
+            }
+
+            .box .box4 {
+                grid-area: foot1;
+            }
+
+            .box .box5 {
+                grid-area: foot2;
+            }
+
+            .box .box6 {
+                grid-area: foot3;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 head3 head4"
+                    "foot1 foot2 foot3 foot4";
+                gap: 13px;
+
+            }
+
+            .box {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
+            }
+
+            .search {
+                /* margin: auto;
+                height: 50px;
+                font-size: 17px;
+                margin-left: 40px; */
+            }
+
+            .grid {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+
+            .ft-top {
+                gap: 30px;
+                /* height: 55px; */
+                padding-top: 5px;
+                padding-left: 70px;
+                padding-bottom: 15px;
+            }
+
+            .ft-txt {
+                font-size: 20px;
+                margin-top: -1px;
+                margin-bottom: 0px;
+            }
+
+            .mail {
+                font-size: 17px;
+            }
+
+            .number {
+                font-size: 14px;
+            }
+
+            .about-us {
+                font-size: 13px;
+            }
+
+            .contact {
+                font-size: 13px;
+            }
+
+            .fb {
+                font-size: 13px;
+            }
+
+            h3 {
+                font-size: 17px;
+            }
+
+            .search-btn {
+                border-radius: 10px;
+                height: 43px;
+                margin-right: 50px;
+                font-size: 15px;
+            }
+
+            .search {
+                height: 45px;
+                width: 900px;
+                margin-top: 11px;
+                /* margin-left: -100px; */
+            }
+
+            .nav-bar {
+                margin-top: 12px;
+                width: 45px;
+            }
+
+            .top {
+                height: 69px;
+            }
+
+            .top-box {
+                margin-top: -10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="menu">
+            <img class="nav-bar" src="bx-menu.svg" alt="nav-bar">
+        </div>
+        <div class="search-box">
+            <input class="search" type="search" placeholder="Search Products Here ...">
+        </div>
+        <div>
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+    <div class="container">
+
+        <!-- <div class="left">
+
+        </div> -->
+        <div class="right content">
+            <div class="body-container">
+                <div class="title">
+                    <h1>Grocceries</h1>
+                </div>
+                <div class="grid">
+                    <div class="box box1">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box2">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box3">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box4">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box5">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box6">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box7">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box8">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+
+                    <div class="box box9">
+                        <div class="img">
+                            <img src="sdw.jpg" class="product-img" alt="product">
+                        </div>
+                        <div class="info">
+                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <p class="product-price">$ 5499.9</p>
+                            <div class="rating">
+                                <div class="stars">
+                                    <img class="star" src="bxs-star.svg" alt="star1">
+                                    <img class="star" src="bxs-star.svg" alt="star2">
+                                    <img class="star" src="bxs-star.svg" alt="star3">
+                                    <img class="star" src="bxs-star.svg" alt="star4">
+                                    <img class="star" src="bx-star.svg" alt="star5">
+                                </div>
+                                <p><span class="review-no">(15)</span></p>
+                            </div>
+                            <p><span class="txt">Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been
+                                    the industry's standard
+                                    dummy text ever since the 1500s.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="ft-top">
+                <div class="top-box">
+                    <img src="" alt="">
+                    <p class="10k ft-txt">10K Customers Served</p>
+                </div>
+
+                <div class="top-box">
+                    <img src="" alt="">
+                    <p class="10-days ft-txt">10 Days Money back Guarantee</p>
+                </div>
+
+                <div class="top-box">
+                    <img src="" alt="">
+                    <p class="100% ft-txt">100% Satisfaction Guaranteed</p>
+                </div>
+            </div>
+            <div class="ft-bottom">
+                <div class="about">
+                    <p class="about-txt1">
+                        We are your one stop shop for a variety of carefully
+                        <br>
+                        selected items such as clothing, accessories,
+                        <br>
+                        bags, shoes and much
+                        more.
+                    </p>
+                    <p class="about-txt2">
+                        If you don't see it we can get it for you.
+                    </p>
+                    <div class="email">
+                        <p class="mail-icon">
+                            @
+                        </p>
+                        <p class="mail">
+                            company.gmail.com
+                        </p>
+                    </div>
+
+                    <div class="phone">
+                        <img src="" alt="">
+                        <p class="number">
+                            08099200589
+                        </p>
+                    </div>
+                </div>
+                <div class="links">
+                    <h3>Quick Links</h3>
+                    <a href="#" class="about-us">
+                        <p>ABOUT US</p>
+                    </a>
+                    <a href="#" class="contact">
+                        <p>CONTACT</p>
+                    </a>
+                </div>
+                <div class="follow">
+                    <h3>Follow</h3>
+                    <a href="#" class="fb">
+                        <p>FACEBOOK</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
