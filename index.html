@@ -13,13 +13,118 @@
             color: #151b32;
             border: 1px solid rgba(209, 208, 213, 0.52);
             background-color: #F1F1F1;
+            width: 100%;
         }
 
         body {
             margin: 0px;
         }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            padding-right: 20px;
+            background-color: #000231;
+            font-size: 20px;
+        }
+
+        .navbar_toggle {
+            height: 35px;
+            margin-left: 10px;
+            margin-top: 7px;
+        }
+
+        .logo {
+            margin-left: 20px;
+            color: #ffffff;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .logo_header {
+            display: flex;
+        }
+
+        .main_nav {
+            /* display: flex; */
+            width: 60%;
+            /* float: right; */
+            margin-left: -50px;
+            /* justify-content: space-between; */
+            list-style: none;
+        }
+
+        .main_nav li:hover {
+            /* border-radius: 50px; */
+        }
+
+        .main_nav li {
+            display: inline;
+            color: #ffffff;
+        }
+
+        .main_nav li a {
+            color: #ffffff;
+        }
+
+        .logo_header {
+            /* width: ; */
+            /* justify-content: space-between; */
+            display: flex;
+            gap: 10px;
+            /* margin-right: 2%; */
+        }
+
+        /* .navbar_toggle {
+display: none;
+} */
         /* .content {} */
+
+        .search-btn {
+            background-color: #1e54f6;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            padding: 0px 10px 0px 10px;
+            height: 30px;
+            margin-top: 7px;
+            font-weight: bold;
+        }
+
+        .search-btn:hover {
+            box-shadow: 1px 1px 2px 2px #3d3d3d41;
+
+        }
+
+        .search {
+            border-radius: 50px;
+            border: 2px solid lightgray;
+            padding: 3px 10px 3px 10px;
+            height: 35px;
+            width: 100%;
+            /* margin: auto; */
+            cursor: pointer;
+            margin-top: 5px;
+            /* margin-right: 50px;
+            margin-left: -50px; */
+        }
+
+        .search:hover {
+            border: 2px solid rgb(168, 168, 168);
+        }
+
+        .top {
+            /* box-shadow: 0px 4px 5px 0px #c4c4c6ab; */
+            /* height: 75px; */
+            /* display: flex; */
+            /* justify-content: space-between; */
+            /* background-color: white; */
+
+        }
 
         .grid {
             display: grid;
@@ -27,13 +132,20 @@
                 "head1 head2 head3"
                 "mid1 mid2 mid3"
                 "foot1 foot2 foot3";
-            gap: 15px;
+            gap: 7px;
             background-color: rgb(250, 250, 250);
             padding-top: 50px;
+            width: 100%;
             padding-bottom: 60px;
             padding-left: 10px;
             padding-right: 10px;
             margin-top: -45px;
+        }
+
+        .title {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: -65px;
         }
 
         .box {
@@ -42,6 +154,13 @@
             border-radius: 5px;
             border: 2px solid lightgray;
             height: auto;
+            width: 1fr;
+            box-shadow: 2px 2px 3px 1px #b0b0b041;
+        }
+
+        .box:hover {
+            box-shadow: 0px 0px 3px 3px #33333341;
+
         }
 
         .box .box1 {
@@ -69,48 +188,11 @@
             grid-area: foot3;
         }
 
-        .nav-bar {
-            height: 35px;
-            margin-left: 10px;
-            margin-top: 7px;
-        }
-
-        .search-btn {
-            background-color: rgb(120, 120, 120);
-            border: none;
-            color: white;
-            border-radius: 15px;
-            padding: 0px 17px 0px 17px;
-            height: 27px;
-            margin-right: 15px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .search-btn:hover {}
-
-        .search {
-            border-radius: 50px;
-            border: 2px solid lightgray;
-            padding: 3px 10px 3px 10px;
-            height: 35px;
-            width: 300px;
-            margin: auto;
-            cursor: pointer;
-            margin-top: 7px;
-        }
-
-        .search:hover {
-            border: 2px solid rgb(168, 168, 168);
-        }
-
-        .top {
-            box-shadow: 0px 4px 5px 0px #c4c4c6ab;
-            height: 50px;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            /* gap: 50px; */
+        .product-img {
+            width: 1fr;
+            height: 150px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
 
         .product-name {
@@ -132,19 +214,18 @@
 
         }
 
-        .product-img {
-            width: 100%;
-            height: auto;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-
         .rating {
             display: none;
         }
 
         .info {
             padding: 10px;
+        }
+
+        h3 {
+            font-size: 13px;
+            margin-left: -5px;
+
         }
 
         .footer {
@@ -224,26 +305,79 @@
             color: aliceblue;
         }
 
-        h3 {
-            font-size: 13px;
-            margin-left: -5px;
+        /* *{
+  margin: 0;
+  padding: 0;
+} */
 
+        a {
+            text-decoration: none;
         }
 
-        .title {
-            text-align: center;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin-bottom: -65px;
-        }
 
         @media(min-width:767px) {
             .container {
-                padding-bottom: 50px;
+                /* padding-bottom: 50px; */
             }
 
             .content {
                 padding-left: 70px;
                 padding-right: 70px;
+            }
+
+            .search-btn {
+                border-radius: 10px;
+                margin-top: 3px;
+                width: 100px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .search {
+                height: 45px;
+                /* width: 400px; */
+                margin: auto;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+
+            .nav-bar {
+                margin-top: 12px;
+            }
+
+            .main_nav {
+                gap: 17%;
+                display: flex;
+            }
+
+            /* .top {
+                height: 57px;
+            } */
+
+            .top-box {
+                margin-top: -10px;
+            }
+
+            .logo {
+                margin-left: 20px;
+                font-size: 35px;
+                margin-top: 5px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 head3"
+                    "mid1 mid2 mid3"
+                    "foot1 foot2 foot3";
+                gap: 13px;
+            }
+
+            .box {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
             }
 
             .box .box1 {
@@ -271,20 +405,20 @@
                 grid-area: foot2;
             }
 
-            .grid {
-                display: grid;
-                grid-template-areas:
-                    "head1 head2 head3"
-                    "mid1 mid2 mid3"
-                    "foot1 foot2 foot3";
-                gap: 13px;
+            .product-img {
+                width: 100%;
+                height: auto;
             }
 
-            .box {
-                display: block;
-                background-color: #fbfcff;
-                border-radius: 10px;
-                border: 2px solid lightgray;
+            .stars {
+                display: inherit;
+                margin-top: 18px;
+            }
+
+            .star {
+                width: 14px;
+                height: 14px;
+                display: inherit;
             }
 
             .txt {
@@ -297,31 +431,18 @@
                 display: inherit;
             }
 
-            .product-img {
-                width: 100%;
-                height: auto;
-            }
-
-            .stars {
-                display: inherit;
-                margin-top: 18px;
-            }
-
             .rating {
                 display: flex;
                 margin-bottom: -27px;
                 gap: 7px;
             }
 
+            h3 {
+                font-size: 15px;
+            }
 
             .info {
                 padding: 10px;
-                display: inherit;
-            }
-
-            .star {
-                width: 14px;
-                height: 14px;
                 display: inherit;
             }
 
@@ -375,35 +496,63 @@
                 font-size: 12px;
             }
 
-            h3 {
-                font-size: 15px;
+        }
+
+        @media only screen and (max-width : 992px) {
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                /* justify-content: space-between;
+                width: 100vw; */
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: #000231;
+
+                font-size: 20px;
             }
 
-            .search-btn {
-                border-radius: 10px;
-                height: 33px;
-                margin-right: 50px;
-                font-size: 14px;
+            .nav_links {
+                border-bottom: 2px solid rgb(109, 109, 109);
             }
 
-            .search {
-                height: 35px;
-                width: 500px;
-                margin-top: 11px;
-                /* margin-left: -100px; */
+            .main_nav {
+                display: none;
             }
 
-            .nav-bar {
-                margin-top: 12px;
+            .show_nav {
+                padding-top: 50px;
+                display: flex;
+                width: 85%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: flex-start;
             }
 
-            .top {
-                height: 57px;
+            .main_nav li {
+                /* width: 100%; */
+                height: 50px;
+                font-size: 25px;
+                justify-content: center;
+                text-align: center;
+                padding: 0%;
             }
 
-            .top-box {
-                margin-top: -10px;
+            .navbar_toggle {
+                margin-left: -5px;
+                /* margin-right: -10px; */
+                margin-bottom: 2px;
+                /* margin-top: 10px; */
+                font-size: 30px;
+                color: #ffffff;
+                /* background: transparent; */
+                /* border-color: transparent; */
+                transition: all 0.3s linear;
+                cursor: pointer;
+                display: block;
             }
+
+
         }
 
         @media(min-width:1000px) {
@@ -411,9 +560,49 @@
                 /* margin-left: 265px; */
             }
 
+            .logo {
+                /* padding-right: 25px; */
+                margin-top: 10px;
+            }
+
+            .navbar {
+                padding-right: 40px;
+                padding-left: 40px;
+                /* width: 45px; */
+                /* display: flex; */
+            }
+
+            .logo_header {
+                display: flex;
+                gap: 50px;
+            }
+
+            .navbar_toggle {
+                display: none;
+            }
+
             .content {
                 padding-left: 100px;
                 padding-right: 100px;
+            }
+
+            .search {
+                /* width: 60%; */
+                /* margin: auto; */
+                /* margin-right: 50px; */
+                height: 40px;
+                /* width: 100%; */
+                margin-top: 11px;
+
+            }
+
+            .search-btn {
+                border-radius: 10px;
+                height: 33px;
+                margin-right: 70px;
+                font-size: 15px;
+                margin-top: 15px;
+
             }
 
             /* .left {
@@ -427,6 +616,25 @@
 
                 border-right: 5px ridge rgb(192, 192, 192);
             } */
+
+
+            .grid {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 head3 head4"
+                    "foot1 foot2 foot3 foot4";
+                gap: 13px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .box {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
+
+            }
 
             .box .box1 {
                 grid-area: head1;
@@ -453,34 +661,9 @@
                 grid-area: foot3;
             }
 
-            .grid {
-                display: grid;
-                grid-template-areas:
-                    "head1 head2 head3 head4"
-                    "foot1 foot2 foot3 foot4";
-                gap: 13px;
-
-            }
-
-            .box {
-                display: block;
-                background-color: #fbfcff;
-                border-radius: 10px;
-                border: 2px solid lightgray;
-            }
-
-            .search {
-                /* margin: auto;
-                height: 50px;
+            h3 {
                 font-size: 17px;
-                margin-left: 40px; */
             }
-
-            .grid {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-
 
             .ft-top {
                 gap: 30px;
@@ -516,32 +699,9 @@
                 font-size: 13px;
             }
 
-            h3 {
-                font-size: 17px;
-            }
-
-            .search-btn {
-                border-radius: 10px;
-                height: 43px;
-                margin-right: 50px;
-                font-size: 15px;
-            }
-
-            .search {
-                height: 45px;
-                width: 900px;
-                margin-top: 11px;
-                /* margin-left: -100px; */
-            }
-
-            .nav-bar {
-                margin-top: 12px;
-                width: 45px;
-            }
-
-            .top {
+            /* .top {
                 height: 69px;
-            }
+            } */
 
             .top-box {
                 margin-top: -10px;
@@ -553,7 +713,7 @@
 
 <body>
     <div class="top">
-        <div class="menu">
+        <!-- <div class="menu">
             <img class="nav-bar" src="bx-menu.svg" alt="nav-bar">
         </div>
         <div class="search-box">
@@ -561,14 +721,45 @@
         </div>
         <div>
             <button class="search-btn">Search</button>
-        </div>
+        </div> -->
+
+        <nav class="navbar">
+            <div class="logo_header">
+                <a href="#" class="logo">Logo</a>
+                <!-- <button class="navbar_toggle">
+            <i class="fas fa-bars"></i>
+        </button> -->
+                <img src="bx-menu.svg" alt="" class="navbar_toggle">
+                <input class="search" type="search" placeholder="Search Products Here ...">
+                <button class="search-btn">Search</button>
+            </div>
+
+
+            <ul class="main_nav">
+                <li>
+                    <a href="#" class="nav_links">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_links">Products</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_links">About</a>
+                </li>
+                <li>
+                    <a href="#" class="nav_links">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
     </div>
+
     <div class="container">
 
         <!-- <div class="left">
 
         </div> -->
-        <div class="right content">
+        <div class="content">
             <div class="body-container">
                 <div class="title">
                     <h1>Grocceries</h1>
@@ -576,18 +767,18 @@
                 <div class="grid">
                     <div class="box box1">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Men Lightweight Jacket - White.jpg" class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Men Lightweight Jacket - White</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -599,18 +790,19 @@
 
                     <div class="box box2">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/2PCS Mens Beach Floral Short Sleeve Shirt(BLUEORANGE).jpg"
+                                class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">2PCS Mens Beach Floral Short Sleeve Shirt(BLUEORANGE)</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -622,18 +814,18 @@
 
                     <div class="box box3">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/ADIDAS CORE TRACKSUIT MTS Tapered.jpg" class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Adidas Core Tracksuit MTS Tapered</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -645,18 +837,18 @@
 
                     <div class="box box4">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Female Party Office Gown - Blue.jpg" class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">products/Female Party Office Gown - Blue</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -668,18 +860,18 @@
 
                     <div class="box box5">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Ladies Free A- Line Gown - Green.jpg" class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Ladies Free A- Line Gown</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -691,18 +883,18 @@
 
                     <div class="box box6">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Ladies Cute Gown - Blue.jpg" class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Ladies Cute Gown - Blue</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -714,18 +906,19 @@
 
                     <div class="box box7">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/4 In 1 Set Single Shoulder Messenger Handbags -Pink.jpg"
+                                class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">4 In 1 Set Single Shoulder Messenger Handbags -Pink</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -737,18 +930,21 @@
 
                     <div class="box box8">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Women Bag Crossbody Bag Handbag Underarm Bag Ladies Sling Purse Tote Hobo Bag Female Messenger Shoulder Bag Wallet Satchel - Black.jpg"
+                                class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Women Bag Crossbody Bag Handbag Underarm Bag Ladies Sling Purse
+                                Tote Hobo Bag Female Messenger Shoulder Bag Wallet
+                                Satchel - Black</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -757,21 +953,22 @@
                                     dummy text ever since the 1500s.</span></p>
                         </div>
                     </div>
- 
+
                     <div class="box box9">
                         <div class="img">
-                            <img src="sdw.jpg" class="product-img" alt="product">
+                            <img src="products/Women Bags Shoulder Inclined-span Bag Fashion Handbag.jpg"
+                                class="product-img" alt="product">
                         </div>
                         <div class="info">
-                            <h2 class="product-name">Mixed pizza with olive bellpepper tomato</h2>
+                            <h2 class="product-name">Women Bags Shoulder Inclined-span Bag Fashion Handbag</h2>
                             <p class="product-price">$ 5499.9</p>
                             <div class="rating">
                                 <div class="stars">
-                                    <img class="star" src="bxs-star.svg" alt="star1">
-                                    <img class="star" src="bxs-star.svg" alt="star2">
-                                    <img class="star" src="bxs-star.svg" alt="star3">
-                                    <img class="star" src="bxs-star.svg" alt="star4">
-                                    <img class="star" src="bx-star.svg" alt="star5">
+                                    <img class="star" src="references/bxs-star.svg" alt="star1">
+                                    <img class="star" src="references/bxs-star.svg" alt="star2">
+                                    <img class="star" src="references/bxs-star.svg" alt="star3">
+                                    <img class="star" src="references/bxs-star.svg" alt="star4">
+                                    <img class="star" src="references/bxs-star.svg" alt="star5">
                                 </div>
                                 <p><span class="review-no">(15)</span></p>
                             </div>
@@ -848,5 +1045,14 @@
         </div>
     </div>
 </body>
+
+<script>
+    const navToggle = document.querySelector(".navbar_toggle");
+    const links = document.querySelector(".main_nav");
+
+    navToggle.addEventListener('click', function () {
+        links.classList.toggle("show_nav");
+    })
+</script>
 
 </html>
