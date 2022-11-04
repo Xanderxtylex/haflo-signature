@@ -1,2 +1,0 @@
-# haflo-signature
-new 
